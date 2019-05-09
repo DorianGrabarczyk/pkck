@@ -332,3 +332,18 @@ weight{
     margin-top: 5px;
     font-weight: bold;
 }
+metainfo:before{
+    display: block;
+    font-size: larger;
+    content: "Autorzy";
+    background: #BCE6E6;
+    border-radius: 10px 10px 0px 0px;
+    text-align: center;
+}
+datas{
+    display: block;
+    font-size: larger;
+    background: #BCE6E6;
+    border-radius: 10px 10px 0px 0px;
+    text-align: center;
+}

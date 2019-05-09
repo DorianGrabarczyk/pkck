@@ -8,6 +8,11 @@
             <enumeration value="Female"/>
         </restriction>
     </simpleType>
+    <!--<simpleType name="pattern">-->
+        <!--<restriction base="normalizedString">-->
+            <!--<pattern value="[0-9]:([a-zA-Z])*"/>-->
+        <!--</restriction>-->
+    <!--</simpleType>-->
         <complexType name ="trainer">
             <sequence>
                 <element name="tname" type="normalizedString" minOccurs="1" maxOccurs="2"/>
@@ -16,7 +21,7 @@
                 <element name="gender" type="trainers:genderEnum" minOccurs="1" maxOccurs="1"/>
                 <element name="region" type="normalizedString" minOccurs="1" maxOccurs="1"/>
                 <element name="hometown" type="normalizedString" minOccurs="1" maxOccurs="1"/>
-                <element name="class" minOccurs="1" maxOccurs='unbounded'/>
+                <element name="class" type="normalizedString" minOccurs="1" maxOccurs='unbounded'/>
             </sequence>
             <attribute name='trainerid' type='normalizedString' use='required'/>
         </complexType>
