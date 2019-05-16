@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--<?xml-stylesheet type="text/xsl" href="poke.xsl?>-->
+<pokedex:pokedex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.przyklad.pl/pokedex pokedex.xsd" xmlns:pokedex="http://www.przyklad.pl/pokedex">
+    <trainers>
+        <trainer trainerid="t1">
+            <tname>Ash</tname>
+            <surname>Ketchum</surname>
+            <age>14</age>
+            <gender>Male</gender>
+            <region>Kanto</region>
+            <hometown>Pallet Town</hometown>
+            <class>Trainer</class>
+        </trainer>
+        <trainer trainerid="t2">
+            <tname>Brock</tname>
+            <surname>Takeshi</surname>
+            <age>16</age>
+            <gender>Male</gender>
+            <region>Kanto</region>
+            <hometown>Pewter City</hometown>
+            <class>Gym leader,Doctor</class>
+        </trainer>
+        <trainer trainerid="t3">
+            <tname>Misty</tname>
+            <surname>Kasumi</surname>
+            <age>16</age>
+            <gender>Female</gender>
+            <region>Kanto</region>
+            <hometown>Cerulean City</hometown>
+            <class>Gym leader,Trainer</class>
+        </trainer>
+        <trainer trainerid="t4">
+            <tname>Gary</tname>
+            <surname>Oak</surname>
+            <age>10</age>
+            <gender>Male</gender>
+            <region>Kanto</region>
+            <hometown>Pallet Town</hometown>
+            <class>Trainer</class>
+        </trainer>
+    </trainers>
+    <pokemons>
+        <pokemon id='1' trainerid="t1">
+            <name>Bulbasaur</name>
+            <type>Grass,Poison</type>
+            <stats>
+                <HP>45</HP>
+                <ATK>49</ATK>
+                <DEF>49</DEF>
+            </stats>
+            <evolutions>
+                <evolution id='1'>
+                    <name>Bulbasaur</name>
+                </evolution>
+                <evolution id='2'>
+                    <name>Ivysaur</name>
+                </evolution>
+                <evolution id='3'>
+                    <name>Venusaur</name>
+                </evolution>
+            </evolutions>
+            <ratio>
+                <male>87.5</male>
+                <female>12.5</female>
+            </ratio>
+            <height>0.7</height>
+            <weight>6.9</weight>
+        </pokemon>
+        <pokemon id='2' trainerid="t1">
+            <name>Ivysaur</name>
+            <type>Grass,Poison</type>
+            <stats>
+                <HP>60</HP>
+                <ATK>62</ATK>
+                <DEF>63</DEF>
+            </stats>
+            <evolutions>
+                <evolution id='1'>
+                    <name>Bulbasaur</name>
+                </evolution>
+                <evolution id='2'>
+                    <name>Ivysaur</name>
+                </evolution>
+                <evolution id='3'>
+                    <name>Venusaur</name>
+                </evolution>
+            </evolutions>
+            <ratio>
+                <male>87.5</male>
+                <female>12.5</female>
+            </ratio>
+            <height>1</height>
+            <weight>13</weight>
+        </pokemon>
+        <pokemon id='3' trainerid="t1">
+            <name>VENUSAUR</name>
+            <type>Grass,Poison</type>
+            <stats>
+                <HP>80</HP>
+                <ATK>82</ATK>
+                <DEF>83</DEF>
+            </stats>
+            <evolutions>
+                <evolution id='1'>
+                    <name>Bulbasaur</name>
+                </evolution>
+                <evolution id='2'>
+                    <name>Ivysaur</name>
+                </evolution>
+                <evolution id='3'>
+                    <name>Venusaur</name>
+                </evolution>
+            </evolutions>
+            <ratio>
+                <male>87.5</male>
+                <female>12.5</female>
+            </ratio>
+
+            <height>2</height>
+            <weight>100</weight>
+
+        </pokemon>
+        <pokemon id='4' trainerid="t2">
+            <name>ODDISH</name>
+            <type>Grass,Poison</type>
+            <stats>
+                <HP>45</HP>
+                <ATK>50</ATK>
+                <DEF>55</DEF>
+            </stats>
+            <evolutions>
+                <evolution id='4'>
+                    <name>Oddish</name>
+                </evolution>
+                <evolution id='5'>
+                    <name>Gloom</name>
+                </evolution>
+                <evolution id='6'>
+                    <name>Vileplume</name>
+                </evolution>
+            </evolutions>
+            <height>0.5</height>
+            <weight>5.4</weight>
+        </pokemon>
+        <pokemon id='5' trainerid="t2">
+            <name>GLOOM</name>
+            <type>Grass,Poison</type>
+            <stats>
+                <HP>60</HP>
+                <ATK>65</ATK>
+                <DEF>70</DEF>
+            </stats>
+            <evolutions>
+                <evolution id='4'>
+                    <name>Oddish</name>
+                </evolution>
+                <evolution id='5'>
+                    <name>Gloom</name>
+                </evolution>
+                <evolution id='6'>
+                    <name>Vileplume</name>
+                </evolution>
+            </evolutions>
+            <height>0.8</height>
+            <weight>8.6</weight>
+        </pokemon>
+        <pokemon id='6' trainerid="t2">
+            <name>Vileplume</name>
+            <type>Grass,Poison</type>
+            <stats>
+                <HP>75</HP>
+                <ATK>80</ATK>
+                <DEF>85</DEF>
+            </stats>
+            <evolutions>
+                <evolution id='4'>
+                    <name>Oddish</name>
+                </evolution>
+                <evolution id='5'>
+                    <name>Gloom</name>
+                </evolution>
+                <evolution id='6'>
+                    <name>Vileplume</name>
+                </evolution>
+            </evolutions>
+            <height>1.2</height>
+            <weight>18.6</weight>
+        </pokemon>
+        <pokemon id='7' trainerid="t3">
+            <name>TREECKO</name>
+            <type>Grass</type>
+            <stats>
+                <HP>40</HP>
+                <ATK>45</ATK>
+                <DEF>35</DEF>
+            </stats>
+            <evolutions>
+                <evolution id='7'>
+                    <name>Treecko</name>
+                </evolution>
+                <evolution id='8'>
+                    <name>Grovyle</name>
+                </evolution>
+                <evolution id='9'>
+                    <name>Sceptile</name>
+                </evolution>
+            </evolutions>
+            <ratio>
+                <male>87.5</male>
+                <female>12.5</female>
+            </ratio>
+            <height>0.5</height>
+            <weight>5</weight>
+        </pokemon>
+        <pokemon id='8' trainerid="t3">
+            <name>GROVYLE</name>
+            <type>Grass</type>
+
+            <stats>
+                <HP>50</HP>
+                <ATK>65</ATK>
+                <DEF>45</DEF>
+            </stats>
+            <evolutions>
+                <evolution id='7'>
+                    <name>Treecko</name>
+                </evolution>
+                <evolution id='8'>
+                    <name>Grovyle</name>
+                </evolution>
+                <evolution id='9'>
+                    <name>Sceptile</name>
+
+                </evolution>
+            </evolutions>
+            <ratio>
+                <male>87.5</male>
+                <female>12.5</female>
+            </ratio>
+            <height>0.9</height>
+            <weight>21.6</weight>
+
+        </pokemon>
+        <pokemon id='9' trainerid="t3">
+            <name>SCEPTILE</name>
+            <type>Grass</type>
+            <stats>
+                <HP>70</HP>
+                <ATK>85</ATK>
+                <DEF>65</DEF>
+            </stats>
+            <evolutions>
+                <evolution id='7'>
+                    <name>Treecko</name>
+                </evolution>
+                <evolution id='8'>
+                    <name>Grovyle</name>
+                </evolution>
+                <evolution id='9'>
+                    <name>Sceptile</name>
+                </evolution>
+            </evolutions>
+            <ratio>
+                <male>87.5</male>
+                <female>12.5</female>
+            </ratio>
+            <height>1.7</height>
+            <weight>52.2</weight>
+        </pokemon>
+        <pokemon id='10' trainerid="t4">
+            <name>LOTAD</name>
+            <type>Water,Grass</type>
+            <stats>
+                <HP>40</HP>
+                <ATK>30</ATK>
+                <DEF>30</DEF>
+            </stats>
+            <evolutions>
+                <evolution id='10'>
+                    <name>Lotad</name>
+                </evolution>
+                <evolution id='11'>
+                    <name>Lombre</name>
+                </evolution>
+                <evolution id='12'>
+                    <name>Ludicolo</name>
+                </evolution>
+            </evolutions>
+            <height>0.5</height>
+            <weight>2.6</weight>
+        </pokemon>
+        <pokemon id='11' trainerid="t4">
+            <name>LOMBRE</name>
+            <type>Water,Grass</type>
+            <stats>
+                <HP>60</HP>
+                <ATK>50</ATK>
+                <DEF>50</DEF>
+            </stats>
+            <evolutions>
+                <evolution id='10'>
+                    <name>Lotad</name>
+                </evolution>
+                <evolution id='11'>
+                    <name>Lombre</name>
+                </evolution>
+                <evolution id='12'>
+                    <name>Ludicolo</name>
+                </evolution>
+            </evolutions>
+            <height>1.2</height>
+            <weight>32.5</weight>
+        </pokemon>
+        <pokemon id='12' trainerid="t4">
+            <name>LUDICOLO</name>
+            <type>Water,Grass</type>
+            <stats>
+                <HP>80</HP>
+                <ATK>70</ATK>
+                <DEF>70</DEF>
+            </stats>
+            <evolutions>
+                <evolution id='10'>
+                    <name>Lotad</name>
+                </evolution>
+                <evolution id='11'>
+                    <name>Lombre</name>
+                </evolution>
+                <evolution id='12'>
+                    <name>Ludicolo</name>
+                </evolution>
+            </evolutions>
+            <height>1.5</height>
+            <weight>55</weight>
+        </pokemon>
+    </pokemons>
+    <metainfo>
+        <datas>
+            <SurName>Dorian:Grabarczyk</SurName>
+            <index>210190</index>
+        </datas>
+        <datas>
+            <SurName>Dominik:Ciesielski</SurName>
+            <index>210155</index>
+        </datas>
+    </metainfo>
+</pokedex:pokedex>

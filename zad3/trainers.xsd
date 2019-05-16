@@ -1,0 +1,33 @@
+<?xml version="1.0" ?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+        targetNamespace="http://www.przyklad.pl/trainers"
+        xmlns:trainers ="http://www.przyklad.pl/trainers">
+    <simpleType name="genderEnum">
+        <restriction base="string">
+            <enumeration value="Male"/>
+            <enumeration value="Female"/>
+        </restriction>
+    </simpleType>
+    <!--<simpleType name="pattern">-->
+        <!--<restriction base="normalizedString">-->
+            <!--<pattern value="[0-9]:([a-zA-Z])*"/>-->
+        <!--</restriction>-->
+    <!--</simpleType>-->
+        <complexType name ="trainer">
+            <sequence>
+                <element name="tname" type="normalizedString" minOccurs="1" maxOccurs="2"/>
+                <element name="surname" type="normalizedString" minOccurs="1" maxOccurs="1"/>
+                <element name="age" type="normalizedString" minOccurs="1" maxOccurs="1"/>
+                <element name="gender" type="trainers:genderEnum" minOccurs="1" maxOccurs="1"/>
+                <element name="region" type="normalizedString" minOccurs="1" maxOccurs="1"/>
+                <element name="hometown" type="normalizedString" minOccurs="1" maxOccurs="1"/>
+                <element name="class" type="normalizedString" minOccurs="1" maxOccurs='unbounded'/>
+            </sequence>
+            <attribute name='trainerid' type='normalizedString' use='required'/>
+        </complexType>
+    <complexType name="trainers">
+        <sequence>
+            <element name="trainer" type="trainers:trainer" minOccurs="1" maxOccurs="unbounded"/>
+        </sequence>
+    </complexType>
+</schema>

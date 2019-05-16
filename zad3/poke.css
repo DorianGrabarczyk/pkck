@@ -1,0 +1,349 @@
+pokedex {
+    display: block;
+    background: #eae7e7;
+    padding-top: 0px;
+    text-align: left;
+    counter-reset: counter;
+}
+trainers:before{
+    display: block;
+    content:"Trainers";
+    font-size: 40pt;
+    text-align: center;
+    padding: 20px;
+    background-color: rgb(199, 235, 247);
+}
+trainer {
+    display:inline-block;
+    margin: 10px;
+    margin-left: 5px;
+    width: 15%;
+    left:15%;
+    border:3px solid #682A68;
+    font-size: 10pt;
+    text-align: center;
+    padding: 10px;
+    background-color:#78C850;
+    position: relative;
+    border-radius: 10px;
+    vertical-align: top;
+}
+
+trainer tname:before{
+    display: block;
+    content: "Name";
+    font-size: larger;
+    background: #BCE6E6;
+    border-radius: 10px 10px 0px 0px;
+
+}
+trainer tname{
+    display: block;
+    background: #5A96C5;
+    border-radius: 10px;
+    font-size: large;
+    font-weight: bold;
+    margin: 7px;
+    border: 1px solid red;
+}
+trainer surname:before{
+    display: block;
+    content: "Surname";
+    font-size: larger;
+    background: #BCE6E6;
+    border-radius: 10px 10px 0px 0px;
+}
+trainer surname{
+    display: block;
+    background: #5A96C5;
+    border-radius: 10px;
+    font-size: large;
+    font-weight: bold;
+    margin: 7px;
+    border: 1px solid red;
+}
+trainer age:before{
+    display: block;
+    content: "Age";
+    font-size: larger;
+    background: #BCE6E6;
+    border-radius: 10px 10px 0px 0px;
+}
+trainer age{
+    display: block;
+    background: #5A96C5;
+    border-radius: 10px;
+    font-size: large;
+    font-weight: bold;
+    margin: 7px;
+    border: 1px solid red;
+}
+trainer gender:before{
+    display: block;
+    content: "Gender";
+    font-size: larger;
+    background: #BCE6E6;
+    border-radius: 10px 10px 0px 0px;
+}
+trainer gender{
+    display: block;
+    background: #5A96C5;
+    border-radius: 10px;
+    font-size: large;
+    font-weight: bold;
+    margin: 7px;
+    border: 1px solid red;
+}
+trainer region:before {
+    display: block;
+    content: "Region";
+    font-size: larger;
+    background: #BCE6E6;
+    border-radius: 10px 10px 0px 0px;
+}
+
+trainer region {
+    display: block;
+    background: #5A96C5;
+    border-radius: 10px;
+    font-size: large;
+    font-weight: bold;
+    margin: 7px;
+    border: 1px solid red;
+}
+trainer hometown:before{
+    display: block;
+    content: "Hometown";
+    font-size: larger;
+    background: #BCE6E6;
+    border-radius: 10px 10px 0px 0px;
+}
+trainer hometown{
+    display: block;
+    background: #5A96C5;
+    border-radius: 10px;
+    font-size: large;
+    font-weight: bold;
+    margin: 7px;
+    border: 1px solid red;
+}
+trainer class:before{
+    display: block;
+    content: "Class";
+    font-size: larger;
+    background: #BCE6E6;
+    border-radius: 10px 10px 0px 0px;
+
+}
+
+trainer class{
+    display: block;
+    background: #5A96C5;
+    border-radius: 10px;
+    font-size: large;
+    font-weight: bold;
+    margin: 7px;
+    border: 1px solid red;
+}
+pokemons:before{
+    display: block;
+    content:"Pokemons";
+    font-size: 40pt;
+    text-align: center;
+    padding: 20px;
+    background-color: rgb(199, 235, 247);
+}
+pokemon {
+    display:inline-block;
+    margin: 10px;
+    margin-left: 5px;
+    width: 15%;
+    border:3px solid #682A68;
+    font-size: 10pt;
+    text-align: center;
+    padding: 10px;
+    background-color:#78C850;
+    position: relative;
+    border-radius: 10px;
+    vertical-align: top;
+}
+stats:before{
+    content: 'Stats';
+    font-size: 15px;
+    display: block;
+    border-radius: 10px;
+    background: #A7DB8D;
+}
+HP:before{
+    content: "HP ";
+    background: #FF5959;
+}
+HP{
+    background: #FF5959;
+    padding: 3px;
+    padding-left: 7px;
+    padding-right: 7px;
+    border-radius: 7px;
+}
+
+ATK:before{
+    content: 'ATK ';
+    background: #F5AC78;
+}
+ATK{
+    background: #F5AC78;
+    padding: 3px;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 7px;
+}
+DEF:before{
+    content: 'DEF ';
+    background: #FAE078;
+}
+DEF{
+    background: #FAE078;
+    padding: 3px;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 7px;
+}
+stats{
+    display: block;
+    background: #A7DB8D;
+    border-radius: 10px;
+    padding-bottom: 5px;
+    border: 1px solid white;
+}
+pokemon type{
+    background: #A7DB8D;
+    border: 1px solid white;
+    border-radius: 10px;
+    display: inline-block;
+    width: 50%;
+    margin-bottom: 2px;
+}
+ratio:before{
+    content: "Gender";
+    background: #A7DB8D;
+    font-size: medium;
+    font-weight: bold;
+    display: block;
+    margin-top: 5px;
+}
+ratio{
+    display: block;
+    background: #A7DB8D;
+    border-radius: 10px;
+    border: 1px solid white;
+    margin-top: 5px;
+}
+ratio male:before{
+    content: "Male ";
+    background: #3355FF;
+    border-radius: 10px;
+    padding-left: 7px;
+}
+ratio male:after{
+    content: " %";
+}
+ratio female:before{
+    content: "Female ";
+    border-radius: 10px;
+    background: #FF77DD;
+    padding-left: 7px;
+}
+ratio male{
+    background: #3355FF;
+    border-radius: 10px;
+    padding-right: 7px;
+}
+ratio female{
+    background: #FF77DD;
+    border-radius: 10px;
+    padding-right: 7px;
+}
+ratio female:after{
+    content: " %";
+}
+
+pokemon name{
+    display: block;
+    border: 1px solid white;
+    border-radius: 10px;
+    background: #A7DB8D;
+    margin: 5px;
+    font-size: larger;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+pokemon evolutions:before{
+    content: 'Evolutions';
+    display: block;
+    font-size: 20px;
+    border-radius: 10px;
+    background: #A7DB8D;
+
+}
+pokemon evolutions{
+    display: block;
+    margin-top: 5px;
+    background: #A7DB8D;
+    border: 1px solid white;
+    border-radius: 10px;
+}
+pokemon evolutions lvl:before{
+    content: "Lvl ";
+    font-weight: bold;
+}
+pokemon evolutions name {
+    font-size: medium;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+lvl{
+    display: block;
+    font-weight: bold;
+
+}
+height:before{
+    content: "Height";
+    display: block;
+    font-size: medium;
+}
+height{
+    display:block;
+    border-radius: 10px;
+    background: #A7DB8D;
+    border: 1px solid white;
+    margin-top: 5px;
+    font-weight: bold;
+}
+weight:before{
+    content: 'Weight';
+    display: block;
+    font-size: medium;
+}
+weight{
+    display:block;
+    border-radius: 10px;
+    background: #A7DB8D;
+    border: 1px solid white;
+    margin-top: 5px;
+    font-weight: bold;
+}
+metainfo:before{
+    display: block;
+    font-size: larger;
+    content: "Autorzy";
+    background: #BCE6E6;
+    border-radius: 10px 10px 0px 0px;
+    text-align: center;
+}
+datas{
+    display: block;
+    font-size: larger;
+    background: #BCE6E6;
+    border-radius: 10px 10px 0px 0px;
+    text-align: center;
+}
