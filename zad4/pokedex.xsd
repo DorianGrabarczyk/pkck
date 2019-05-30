@@ -1,0 +1,27 @@
+<?xml version ="1.0" ?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.przyklad.pl/pokedex" xmlns:trainers="http://www.przyklad.pl/trainers" xmlns:pokemons="http://www.przyklad.pl/pokemons" xmlns:metainfo="http://www.przyklad.pl/metainfo">
+    <import schemaLocation="pokemons.xsd" namespace="http://www.przyklad.pl/pokemons"/>
+    <import schemaLocation="trainers.xsd" namespace="http://www.przyklad.pl/trainers"/>
+    <import schemaLocation="metainfo.xsd" namespace="http://www.przyklad.pl/metainfo"/>
+<element name="pokedex">
+        <complexType>
+            <sequence minOccurs='0' maxOccurs='unbounded'>
+                <element name="trainers" type="trainers:trainers" minOccurs="1" maxOccurs="1"/>
+                <element name="pokemons" type="pokemons:pokemons" minOccurs="1" maxOccurs="1"/>
+                <element name="metainfo" type="metainfo:metainfo" minOccurs="1" maxOccurs="1"/>
+            </sequence>
+        </complexType>
+    <key name="trainerid">
+        <selector xpath="./trainers/trainer"/>
+        <field xpath="@trainerid"/>
+    </key>
+    <keyref name="trainerIdRef" refer="trainerid">
+        <selector xpath="./pokemons/pokemon"/>
+        <field xpath="@trainerid"></field>
+    </keyref>
+    <key name="pokemonId">
+        <selector xpath="./pokemons/pokemons"/>
+        <field xpath="@id"/>
+    </key>
+    </element>
+</schema>

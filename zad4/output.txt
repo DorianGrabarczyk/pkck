@@ -1,0 +1,22 @@
+Trainers
+Imie Trenera: Brock		Nazwisko Trenera: Takeshi		Wiek Trenera: 16		Miasto Trenera: Pewter City
+Imie Trenera: Gary 		Nazwisko Trenera: Oak   		Wiek Trenera: 10		Miasto Trenera: Pallet Town
+Imie Trenera: Ash  		Nazwisko Trenera: Ketchum		Wiek Trenera: 14		Miasto Trenera: Pallet Town
+Imie Trenera: Misty		Nazwisko Trenera: Kasumi		Wiek Trenera: 16		Miasto Trenera: Cerulean City
+
+Pokemons
+Nazwa Pokemona: Vileplume		Typ pokemona: Grass,Poison		HP : 75		DEF : 85		ATK : 80
+Nazwa Pokemona: VENUSAUR		Typ pokemona: Grass,Poison		HP : 80		DEF : 83		ATK : 82
+Nazwa Pokemona: TREECKO  		Typ pokemona: Grass     		HP : 40		DEF : 35		ATK : 45
+Nazwa Pokemona: SCEPTILE		Typ pokemona: Grass     		HP : 70		DEF : 65		ATK : 85
+Nazwa Pokemona: ODDISH   		Typ pokemona: Grass,Poison		HP : 45		DEF : 55		ATK : 50
+Nazwa Pokemona: LUDICOLO		Typ pokemona: Water,Grass		HP : 80		DEF : 70		ATK : 70
+Nazwa Pokemona: LOTAD   		Typ pokemona: Water,Grass		HP : 40		DEF : 30		ATK : 30
+Nazwa Pokemona: LOMBRE   		Typ pokemona: Water,Grass		HP : 60		DEF : 50		ATK : 50
+Nazwa Pokemona: Ivysaur   		Typ pokemona: Grass,Poison		HP : 60		DEF : 63		ATK : 62
+Nazwa Pokemona: GROVYLE   		Typ pokemona: Grass      		HP : 50		DEF : 45		ATK : 65
+Nazwa Pokemona: GLOOM   		Typ pokemona: Grass,Poison		HP : 60		DEF : 70		ATK : 65
+Nazwa Pokemona: Bulbasaur		Typ pokemona: Grass,Poison		HP : 45		DEF : 49		ATK : 49
+
+Stats
+Nazwa Pokemona: 12		Typ pokemona: 4		HP : 58.75		DEF : 58.33		ATK : 61.08
