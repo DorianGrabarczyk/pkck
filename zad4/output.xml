@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?><raport>
+<trainers>
+<trainer>
+<tname>Brock</tname>
+<surname>Takeshi</surname>
+<age>16</age>
+<gender>Male</gender>
+<region>Kanto</region>
+<hometown>Pewter City</hometown>
+<class>Gym leader,Doctor</class>
+</trainer>
+<trainer>
+<tname>Gary </tname>
+<surname>Oak   </surname>
+<age>10</age>
+<gender>Male</gender>
+<region>Kanto</region>
+<hometown>Pallet Town</hometown>
+<class>Trainer</class>
+</trainer>
+<trainer>
+<tname>Ash  </tname>
+<surname>Ketchum</surname>
+<age>14</age>
+<gender>Male</gender>
+<region>Kanto</region>
+<hometown>Pallet Town</hometown>
+<class>Trainer</class>
+</trainer>
+<trainer>
+<tname>Misty</tname>
+<surname>Kasumi</surname>
+<age>16</age>
+<gender>Female</gender>
+<region>Kanto</region>
+<hometown>Cerulean City</hometown>
+<class>Gym leader,Trainer</class>
+</trainer>
+</trainers>
+<pokemons>
+<pokemon>
+<name>Vileplume</name>
+<type>Grass,Poison</type>
+<HP>75</HP>
+<DEF>85</DEF>
+<ATK>80</ATK>
+</pokemon>
+<pokemon>
+<name>VENUSAUR</name>
+<type>Grass,Poison</type>
+<HP>80</HP>
+<DEF>83</DEF>
+<ATK>82</ATK>
+</pokemon>
+<pokemon>
+<name>TREECKO  </name>
+<type>Grass     </type>
+<HP>40</HP>
+<DEF>35</DEF>
+<ATK>45</ATK>
+</pokemon>
+<pokemon>
+<name>SCEPTILE</name>
+<type>Grass     </type>
+<HP>70</HP>
+<DEF>65</DEF>
+<ATK>85</ATK>
+</pokemon>
+<pokemon>
+<name>ODDISH   </name>
+<type>Grass,Poison</type>
+<HP>45</HP>
+<DEF>55</DEF>
+<ATK>50</ATK>
+</pokemon>
+<pokemon>
+<name>LUDICOLO</name>
+<type>Water,Grass</type>
+<HP>80</HP>
+<DEF>70</DEF>
+<ATK>70</ATK>
+</pokemon>
+<pokemon>
+<name>LOTAD   </name>
+<type>Water,Grass</type>
+<HP>40</HP>
+<DEF>30</DEF>
+<ATK>30</ATK>
+</pokemon>
+<pokemon>
+<name>LOMBRE   </name>
+<type>Water,Grass</type>
+<HP>60</HP>
+<DEF>50</DEF>
+<ATK>50</ATK>
+</pokemon>
+<pokemon>
+<name>Ivysaur   </name>
+<type>Grass,Poison</type>
+<HP>60</HP>
+<DEF>63</DEF>
+<ATK>62</ATK>
+</pokemon>
+<pokemon>
+<name>GROVYLE   </name>
+<type>Grass      </type>
+<HP>50</HP>
+<DEF>45</DEF>
+<ATK>65</ATK>
+</pokemon>
+<pokemon>
+<name>GLOOM   </name>
+<type>Grass,Poison</type>
+<HP>60</HP>
+<DEF>70</DEF>
+<ATK>65</ATK>
+</pokemon>
+<pokemon>
+<name>Bulbasaur</name>
+<type>Grass,Poison</type>
+<HP>45</HP>
+<DEF>49</DEF>
+<ATK>49</ATK>
+</pokemon>
+</pokemons>
+<statystyki>
+<liczby>
+<liczbaTrenerow>4</liczbaTrenerow>
+<liczbaPokemonów>12</liczbaPokemonów>
+<sredniAtk>61.08</sredniAtk>
+<sredniHp>58.75</sredniHp>
+<sredniDef>58.33</sredniDef>
+</liczby>
+<pokemonyAsha>
+<poke>VENUSAUR</poke>
+<poke>Ivysaur</poke>
+<poke>Bulbasaur</poke>
+</pokemonyAsha>
+<pokemonyBrocka>
+<poke>ODDISH</poke>
+<poke>GLOOM</poke>
+<poke>Vileplume</poke>
+</pokemonyBrocka>
+<pokemonyMisty>
+<poke>TREECKO</poke>
+<poke>GROVYLE</poke>
+<poke>SCEPTILE</poke>
+</pokemonyMisty>
+<pokemonyGarego>
+<poke>LOTAD</poke>
+<poke>LOMBRE</poke>
+<poke>LUDICOLO</poke>
+</pokemonyGarego>
+<najwyzszeEwolucje>
+<poke>VENUSAUR</poke>
+<poke>Vileplume</poke>
+<poke>SCEPTILE</poke>
+<poke>LUDICOLO</poke>
+</najwyzszeEwolucje>
+<autorzy>
+<autor>Dorian:Grabarczyk</autor>
+<autor>210190</autor>
+<autor>Dominik:Ciesielski</autor>
+<autor>210155</autor>
+</autorzy>
+</statystyki>
+</raport>

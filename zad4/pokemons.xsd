@@ -1,0 +1,57 @@
+<?xml version="1.0" ?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.przyklad.pl/pokemons"
+        xmlns:pokemons="http://www.przyklad.pl/pokemons">
+
+    <complexType name="pokemons">
+        <sequence minOccurs='0' maxOccurs='unbounded'>
+            <element name="pokemon" type="pokemons:pokemon"/>
+        </sequence>
+    </complexType>
+
+
+    <complexType name="pokemon">
+        <sequence>
+            <element name="name" type="normalizedString" minOccurs="1" maxOccurs='unbounded'/>
+            <element name="type" type="normalizedString" minOccurs='0' maxOccurs='unbounded'/>
+            <element name="stats" type="pokemons:stats" minOccurs="1" maxOccurs="1"/>
+            <element name="evolutions" type="pokemons:evolutions" minOccurs="1" maxOccurs="1"/>
+            <element name="ratio" type="pokemons:ratio" minOccurs='0' maxOccurs='1'/>
+            <element name="height" type="normalizedString" minOccurs="1" maxOccurs="1"/>
+            <element name="weight" type="normalizedString" minOccurs="1" maxOccurs="1"/>
+        </sequence>
+        <attribute name='id' type='normalizedString' use='required'/>
+        <attribute name='trainerid' type='normalizedString' use='required'/>
+    </complexType>
+
+    <element name='type' type='string'>
+    </element>
+
+    <complexType name="stats">
+        <sequence minOccurs='0' maxOccurs='unbounded'>
+            <element name="HP" type="normalizedString"/>
+            <element name="ATK" type="double"/>
+            <element name="DEF" type="normalizedString"/>
+        </sequence>
+    </complexType>
+
+    <complexType name='evolutions'>
+        <sequence minOccurs='0' maxOccurs='unbounded'>
+            <element name="evolution" type="pokemons:evolution"/>
+        </sequence>
+    </complexType>
+
+    <complexType name='evolution'>
+        <sequence>
+            <element name="name" type="normalizedString" minOccurs="1" maxOccurs="unbounded"/>
+        </sequence>
+        <attribute name='id' type='string' use='required'/>
+    </complexType>
+    <complexType name='ratio'>
+        <choice minOccurs='0' maxOccurs='unbounded'>
+            <element name="male" type="normalizedString"/>
+            <element name="female" type="normalizedString"/>
+        </choice>
+    </complexType>
+
+
+</schema>
