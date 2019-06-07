@@ -10,7 +10,7 @@ namespace PKCK_Zad5
         public MainWindow()
         {
             InitializeComponent();
-            DataContext = new ViewModel.ViewModel();
+            DataContext = new ViewModel.MainViewModel();
         }
     }
 }

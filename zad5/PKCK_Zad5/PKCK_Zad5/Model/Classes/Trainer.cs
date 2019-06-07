@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PKCK_Zad5.Model.Classes
 {
-    class Trainer
+    public class Trainer
     {
         public string Tname { get; set; }
         public string Surname { get; set; }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PKCK_Zad5.Model.Classes
 {
-    class Statistics
+    public class Statistics
     {
         public int HP { get; set; }
         public int ATK { get; set; }

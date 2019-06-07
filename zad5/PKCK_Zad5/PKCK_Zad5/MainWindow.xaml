@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PKCK_Zad5"
         mc:Ignorable="d"
-        Title="MainWindow" Height="600" Width="400">
+        Title="MainWindow" Height="600" Width="400" WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="20"/>
@@ -26,18 +26,18 @@
                     <MenuItem Header="Serializuj" Command="{Binding SaveButtonPressed}"/>
                     <MenuItem Header="Deserializuj" Command="{Binding LoadButtonPressed}"/>
                 </MenuItem>
-                <MenuItem Header="Pokemon">
-                    <MenuItem Header="Dodaj" Command="{Binding SaveButtonPressed}"/>
-                    <MenuItem Header="Usuń" Command="{Binding LoadButtonPressed}"/>
-                </MenuItem>
                 <MenuItem Header="Trener">
-                    <MenuItem Header="Dodaj" Command="{Binding SaveButtonPressed}"/>
-                    <MenuItem Header="Usuń" Command="{Binding LoadButtonPressed}"/>
+                    <MenuItem Header="Dodaj" Command="{Binding TrainerAddButton}"/>
+                    <MenuItem Header="Usuń" Command="{Binding TrainerDeleteButton}"/>
+                </MenuItem>
+                <MenuItem Header="Pokemon">
+                    <MenuItem Header="Dodaj" Command="{Binding PokemonAddButton}"/>
+                    <MenuItem Header="Usuń" Command="{Binding PokemonDeleteButton}"/>
                 </MenuItem>
             </Menu>
         </DockPanel>
 
-        <ListBox Grid.Column="0" Grid.RowSpan="2" Grid.Row="2" ItemsSource="{Binding TrainerList, UpdateSourceTrigger=PropertyChanged}" SelectedIndex="{Binding SelectedTrainer, UpdateSourceTrigger=PropertyChanged}"/>
+        <ListBox Grid.Column="0" Grid.RowSpan="2" Grid.Row="2" ItemsSource="{Binding Path=TrainerList, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" SelectedIndex="{Binding Path=SelectedTrainer, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"/>
         <ListBox Grid.Column="1" Grid.RowSpan="2" Grid.Row="2" ItemsSource="{Binding PokemonList, UpdateSourceTrigger=PropertyChanged}" SelectedIndex="{Binding SelectedPokemon, UpdateSourceTrigger=PropertyChanged}"/>
 
         <GridSplitter Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Stretch"/>
@@ -80,10 +80,10 @@
         <ScrollViewer Grid.Column="1" Grid.Row="5">
             <Grid>
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="55"/>
-                    <RowDefinition Height="55"/>
-                    <RowDefinition Height="55"/>
-                    <RowDefinition Height="55"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
                 </Grid.RowDefinitions>
 
                 <Label Grid.Row="0" Content="Imie:" Margin="5,0,5,25"/>

@@ -7,16 +7,18 @@ using PKCK_Zad5.Model.Classes;
 using PKCK_Zad5.Model;
 using System.ComponentModel;
 using System.Windows.Input;
+using System.Collections.ObjectModel;
 
 namespace PKCK_Zad5.ViewModel
 {
-    class ViewModel : INotifyPropertyChanged
+    class MainViewModel : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
-        private readonly Model.Model model = new Model.Model();
 
-        public List<Trainer> TrainerList { get; set; }
-        public List<Pokemon> PokemonList { get; set; }
+        public MainModel Model { get; set; }
+
+        public ObservableCollection<Trainer> TrainerList { get; set; }
+        public ObservableCollection<Pokemon> PokemonList { get; set; }
 
         private int selectedTrainer;
         private string trainerName;
@@ -44,13 +46,16 @@ namespace PKCK_Zad5.ViewModel
             {
                 selectedTrainer = value;
 
-                TrainerName = TrainerList[selectedTrainer].Tname;
-                TrainerSurname = TrainerList[selectedTrainer].Surname;
-                TrainerAge = TrainerList[selectedTrainer].Age.ToString();
-                TrainerGender = TrainerList[selectedTrainer].Gender;
-                TrainerRegion = TrainerList[selectedTrainer].Region;
-                TrainerHometown = TrainerList[selectedTrainer].Hometown;
-                TrainerClass = TrainerList[selectedTrainer].Class;
+                if(selectedTrainer >= 0 && selectedTrainer < TrainerList.Count)
+                {
+                    TrainerName = TrainerList[selectedTrainer].Tname;
+                    TrainerSurname = TrainerList[selectedTrainer].Surname;
+                    TrainerAge = TrainerList[selectedTrainer].Age.ToString();
+                    TrainerGender = TrainerList[selectedTrainer].Gender;
+                    TrainerRegion = TrainerList[selectedTrainer].Region;
+                    TrainerHometown = TrainerList[selectedTrainer].Hometown;
+                    TrainerClass = TrainerList[selectedTrainer].Class;
+                }
             }
         }
         public string TrainerName
@@ -148,10 +153,13 @@ namespace PKCK_Zad5.ViewModel
             {
                 selectedPokemon = value;
 
-                PokemonName = PokemonList[selectedPokemon].Name;
-                PokemonType = PokemonList[selectedPokemon].Type;
-                PokemonStats = PokemonList[selectedPokemon].Stats.ToString();
-                PokemonEvolutions = PokemonList[selectedPokemon].EvolutionsToString();
+                if (selectedPokemon >= 0 && selectedPokemon < PokemonList.Count)
+                {
+                    PokemonName = PokemonList[selectedPokemon].Name;
+                    PokemonType = PokemonList[selectedPokemon].Type;
+                    PokemonStats = PokemonList[selectedPokemon].Stats.ToString();
+                    PokemonEvolutions = PokemonList[selectedPokemon].EvolutionsToString();
+                }
             }
         }
         public string PokemonName
@@ -203,29 +211,69 @@ namespace PKCK_Zad5.ViewModel
             }
         }
 
-        ICommand TrainerAddButton { get; }
+        public ICommand TrainerAddButton { get; }
+        public ICommand PokemonAddButton { get; }
+        public ICommand TrainerDeleteButton { get; }
+        public ICommand PokemonDeleteButton { get; }
 
-
-        public ViewModel()
+        public MainViewModel()
         {
-            TrainerList = new List<Trainer>();
-            PokemonList = new List<Pokemon>();
+            Model = new MainModel();
+
+            TrainerList = Model.Data.Trainers;
+            PokemonList = Model.Data.Pokemons;
+
+            PokemonList.Add(new Pokemon("Dorian", "Ognisty", new Statistics(100, 100, 100)));
 
             TrainerAddButton = new RelayCommand(AddTrainer);
+            PokemonAddButton = new RelayCommand(AddPokemon);
+            TrainerDeleteButton = new RelayCommand(DeleteTrainer);
+            PokemonDeleteButton = new RelayCommand(DeletePokemon);
         }
 
         public void AddTrainer()
         {
+            AddTrainerWindow addTrainerWindow = new AddTrainerWindow(TrainerList);
+            addTrainerWindow.ShowDialog();
+            OnPropertyChanged("TrainerList");
+            if(TrainerList.Count >= 1)
+            {
+                SelectedTrainer = TrainerList.Count-1;
+            } 
+        }
 
+        public void AddPokemon()
+        {
+            AddPokemonWindow addPokemonWindow = new AddPokemonWindow(PokemonList);
+            addPokemonWindow.ShowDialog();
+            OnPropertyChanged("TrainerList");
+            if (PokemonList.Count >= 1)
+            {
+                SelectedPokemon = PokemonList.Count-1;
+            }
+        }
+
+        public void DeleteTrainer()
+        {
+            if (selectedTrainer >= 0 && selectedTrainer < TrainerList.Count)
+            {
+                TrainerList.RemoveAt(selectedTrainer);
+                OnPropertyChanged("TrainerList");
+            }
+        }
+
+        public void DeletePokemon()
+        {
+            if(selectedPokemon >= 0 && selectedPokemon < PokemonList.Count)
+            {
+                PokemonList.RemoveAt(selectedPokemon);
+                OnPropertyChanged("PokemonList");
+            }
         }
 
         protected void OnPropertyChanged(string name)
         {
-            PropertyChangedEventHandler handler = PropertyChanged;
-            if (handler != null)
-            {
-                handler(this, new PropertyChangedEventArgs(name));
-            }
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
         }
     }
 }

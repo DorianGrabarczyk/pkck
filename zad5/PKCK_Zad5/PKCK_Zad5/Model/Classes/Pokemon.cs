@@ -1,23 +1,24 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace PKCK_Zad5.Model.Classes
 {
-    class Pokemon
+    public class Pokemon
     {
         public string Name { get; set; }
         public string Type { get; set; }
         public Statistics Stats { get; set; }
-        public List<Pokemon> Evolutions { get; set; }
+        public ObservableCollection<Pokemon> Evolutions { get; set; }
 
-        public Pokemon(string _name, string _type, Statistics _stats, List<Pokemon> _evolutions = null)
+        public Pokemon(string _name, string _type, Statistics _stats, ObservableCollection<Pokemon> _evolutions = null)
         {
             if(_evolutions == null)
             {
-                Evolutions = new List<Pokemon>();
+                Evolutions = new ObservableCollection<Pokemon>();
             }
             else
             {
@@ -36,7 +37,7 @@ namespace PKCK_Zad5.Model.Classes
 
         public string EvolutionsToString()
         {
-            if (Evolutions.Count == 0)
+            if (Evolutions.Count == 0 || Evolutions == null)
             {
                 return "BRAK EWOLUCJI";
             }
