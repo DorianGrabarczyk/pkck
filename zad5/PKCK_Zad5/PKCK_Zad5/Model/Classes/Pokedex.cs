@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace PKCK_Zad5.Model.Classes
 {
-    class Pokedex
+    public class Pokedex
     {
         public ObservableCollection<Trainer> Trainers { get; set; }
         public ObservableCollection<Pokemon> Pokemons { get; set; }

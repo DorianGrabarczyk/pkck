@@ -30,6 +30,8 @@ namespace PKCK_Zad5.Model.Classes
             Stats = _stats;
         }
 
+        public Pokemon() { }
+
         public override string ToString()
         {
             return Name;

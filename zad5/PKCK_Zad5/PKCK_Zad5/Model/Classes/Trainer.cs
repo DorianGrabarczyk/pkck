@@ -27,6 +27,8 @@ namespace PKCK_Zad5.Model.Classes
             Class = _class;
         }
 
+        public Trainer() { }
+
         public override string ToString()
         {
             return Tname + " " + Surname;

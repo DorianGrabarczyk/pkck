@@ -215,20 +215,33 @@ namespace PKCK_Zad5.ViewModel
         public ICommand PokemonAddButton { get; }
         public ICommand TrainerDeleteButton { get; }
         public ICommand PokemonDeleteButton { get; }
+        public ICommand PokedexSerializeButton { get; }
+        public ICommand PokedexDeserializeButton { get; }
 
         public MainViewModel()
         {
             Model = new MainModel();
 
-            TrainerList = Model.Data.Trainers;
-            PokemonList = Model.Data.Pokemons;
-
-            PokemonList.Add(new Pokemon("Dorian", "Ognisty", new Statistics(100, 100, 100)));
+            this.Bind();
 
             TrainerAddButton = new RelayCommand(AddTrainer);
             PokemonAddButton = new RelayCommand(AddPokemon);
             TrainerDeleteButton = new RelayCommand(DeleteTrainer);
             PokemonDeleteButton = new RelayCommand(DeletePokemon);
+            PokedexSerializeButton = new RelayCommand(SerializePokedex);
+            PokedexDeserializeButton = new RelayCommand(DeserializePokedex);
+        }
+
+        private void Bind()
+        {
+            PokemonList = Model.Data.Pokemons;
+            TrainerList = Model.Data.Trainers;
+
+            if (PokemonList.Count >= 1) SelectedPokemon = 0;
+            if (TrainerList.Count >= 1) SelectedTrainer = 0;
+
+            OnPropertyChanged("TrainerList");
+            OnPropertyChanged("PokemonList");
         }
 
         public void AddTrainer()
@@ -269,6 +282,17 @@ namespace PKCK_Zad5.ViewModel
                 PokemonList.RemoveAt(selectedPokemon);
                 OnPropertyChanged("PokemonList");
             }
+        }
+
+        public void SerializePokedex()
+        {
+            Model.Serialize();
+        }
+
+        public void DeserializePokedex()
+        {
+            Model.Deserialize();
+            this.Bind();
         }
 
         protected void OnPropertyChanged(string name)

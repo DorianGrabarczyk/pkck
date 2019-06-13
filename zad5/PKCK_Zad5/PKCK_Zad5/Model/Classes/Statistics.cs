@@ -19,6 +19,8 @@ namespace PKCK_Zad5.Model.Classes
             DEF = _def;
         }
 
+        public Statistics() { }
+
         public override string ToString()
         {
             return "HP: " + HP + ", ATK: " + ATK + ", DEF: " + DEF;
