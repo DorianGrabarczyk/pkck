@@ -1,0 +1,44 @@
+﻿<Window x:Class="PKCK_Zad5.AddPokemonWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PKCK_Zad5"
+        mc:Ignorable="d"
+        Title="AddPokemonWindow" Height="395" Width="230" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="125"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+
+        <Label Grid.Row="0" Content="Nazwa:" Margin="5,0,5,25"/>
+        <TextBox Grid.Row="0" Text="{Binding Path=PokemonName}" TextAlignment="Right" Margin="5,25,5,5"/>
+
+        <Label Grid.Row="1" Content="Typ:"  Margin="5,0,5,25"/>
+        <TextBox Grid.Row="1" Text="{Binding Path=PokemonType}" TextAlignment="Right" Margin="5,25,5,5"/>
+
+        <Label Grid.Row="2" Content="Statystyki:"  Margin="5,0,5,25"/>
+        <Label Grid.Row="2" Content="HP:" Margin="7,23,177,2"/>
+        <TextBox Grid.Row="2" Text="{Binding PokemonHP}" TextAlignment="Right" Margin="36,26,153,4"/>
+        <Label Grid.Row="2" Content="ATK:" Margin="71,23,108,2"/>
+        <TextBox Grid.Row="2" Text="{Binding PokemonATK}" TextAlignment="Right" Margin="105,26,84,4"/>
+        <Label Grid.Row="2" Content="DEF:" Margin="140,23,39,2"/>
+        <TextBox Grid.Row="2" Text="{Binding PokemonDEF}" TextAlignment="Right" Margin="172,26,17,4"/>
+
+        <Label Grid.Row="3" Content="Ewolucje:"  Margin="5,0,5,25"/>
+        <ComboBox Grid.Row="3" ItemsSource="{Binding PokemonList}" SelectedIndex="{Binding SelectedPokemon}" Margin="5,25,5,80"/>
+        <ScrollViewer Grid.Row="3" Margin="5, 50, 5, 5">
+            <ListBox ItemsSource="{Binding PokemonEvolutionList, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" SelectedIndex="{Binding Path=SelectedEvolution, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"/>
+        </ScrollViewer>
+
+        <Button Grid.Row="4" Content="DODAJ EWOLUCJE" Command="{Binding PokemonAddEvolutionButton}" Margin="5,5,115,5"/>
+        <Button Grid.Row="4" Content="USUŃ EWOLUCJE" Command="{Binding PokemonDeleteEvolutionButton}" Margin="115,5,5,5"/>
+
+        <Button Grid.Row="5" Content="DODAJ" Command="{Binding PokemonAddButton}" Margin="5"/>
+    </Grid>
+</Window>
