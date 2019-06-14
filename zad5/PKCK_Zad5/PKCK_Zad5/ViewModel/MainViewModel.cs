@@ -217,6 +217,7 @@ namespace PKCK_Zad5.ViewModel
         public ICommand PokemonDeleteButton { get; }
         public ICommand PokedexSerializeButton { get; }
         public ICommand PokedexDeserializeButton { get; }
+        public ICommand TransformToXHTML { get; }
 
         public MainViewModel()
         {
@@ -230,6 +231,7 @@ namespace PKCK_Zad5.ViewModel
             PokemonDeleteButton = new RelayCommand(DeletePokemon);
             PokedexSerializeButton = new RelayCommand(SerializePokedex);
             PokedexDeserializeButton = new RelayCommand(DeserializePokedex);
+            TransformToXHTML = new RelayCommand(Transform);
         }
 
         private void Bind()
@@ -293,6 +295,11 @@ namespace PKCK_Zad5.ViewModel
         {
             Model.Deserialize();
             this.Bind();
+        }
+
+        public void Transform()
+        {
+            Model.TransformToXHTML();
         }
 
         protected void OnPropertyChanged(string name)

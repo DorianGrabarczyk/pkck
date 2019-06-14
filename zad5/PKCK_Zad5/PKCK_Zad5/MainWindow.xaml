@@ -25,6 +25,7 @@
                 <MenuItem Header="XML">
                     <MenuItem Header="Serializuj" Command="{Binding PokedexSerializeButton}"/>
                     <MenuItem Header="Deserializuj" Command="{Binding PokedexDeserializeButton}"/>
+                    <MenuItem Header="XHTML" Command="{Binding TransformToXHTML}"/>
                 </MenuItem>
                 <MenuItem Header="Trener">
                     <MenuItem Header="Dodaj" Command="{Binding TrainerAddButton}"/>

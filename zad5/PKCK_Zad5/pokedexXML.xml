@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="transformToXHTML.xsl?>
+<Pokedex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Trainers>
+    <Trainer>
+      <Tname>Dorian</Tname>
+      <Surname>Grabarczyk</Surname>
+      <Age>22</Age>
+      <Gender>M</Gender>
+      <Region>Łódź</Region>
+      <Hometown>Płock</Hometown>
+      <Class>Trener</Class>
+    </Trainer>
+    <Trainer>
+      <Tname>Dominik</Tname>
+      <Surname>Ciesielski</Surname>
+      <Age>21</Age>
+      <Gender>M</Gender>
+      <Region>Łódź</Region>
+      <Hometown>Świerklany</Hometown>
+      <Class>Hodowca</Class>
+    </Trainer>
+    <Trainer>
+      <Tname>Agnieszka</Tname>
+      <Surname>Lisowska</Surname>
+      <Age>26</Age>
+      <Gender>K</Gender>
+      <Region>Łódź</Region>
+      <Hometown>Łódź</Hometown>
+      <Class>Fan</Class>
+    </Trainer>
+  </Trainers>
+  <Pokemons>
+    <Pokemon>
+      <Name>Venosaur</Name>
+      <Type>Grass, Poison</Type>
+      <Stats>
+        <HP>80</HP>
+        <ATK>85</ATK>
+        <DEF>83</DEF>
+      </Stats>
+      <Evolutions />
+    </Pokemon>
+    <Pokemon>
+      <Name>Ivysaur</Name>
+      <Type>Grass, poison</Type>
+      <Stats>
+        <HP>60</HP>
+        <ATK>62</ATK>
+        <DEF>63</DEF>
+      </Stats>
+      <Evolutions>
+        <Pokemon>
+          <Name>Venosaur</Name>
+          <Type>Grass, Poison</Type>
+          <Stats>
+            <HP>80</HP>
+            <ATK>85</ATK>
+            <DEF>83</DEF>
+          </Stats>
+          <Evolutions />
+        </Pokemon>
+      </Evolutions>
+    </Pokemon>
+    <Pokemon>
+      <Name>Bublasaur</Name>
+      <Type>Grass, Poison</Type>
+      <Stats>
+        <HP>45</HP>
+        <ATK>49</ATK>
+        <DEF>49</DEF>
+      </Stats>
+      <Evolutions>
+        <Pokemon>
+          <Name>Ivysaur</Name>
+          <Type>Grass, poison</Type>
+          <Stats>
+            <HP>60</HP>
+            <ATK>62</ATK>
+            <DEF>63</DEF>
+          </Stats>
+          <Evolutions>
+            <Pokemon>
+              <Name>Venosaur</Name>
+              <Type>Grass, Poison</Type>
+              <Stats>
+                <HP>80</HP>
+                <ATK>85</ATK>
+                <DEF>83</DEF>
+              </Stats>
+              <Evolutions />
+            </Pokemon>
+          </Evolutions>
+        </Pokemon>
+      </Evolutions>
+    </Pokemon>
+    <Pokemon>
+      <Name>Charizard</Name>
+      <Type>Fire, Flying</Type>
+      <Stats>
+        <HP>78</HP>
+        <ATK>84</ATK>
+        <DEF>78</DEF>
+      </Stats>
+      <Evolutions />
+    </Pokemon>
+    <Pokemon>
+      <Name>Charmeleon</Name>
+      <Type>Fire</Type>
+      <Stats>
+        <HP>58</HP>
+        <ATK>64</ATK>
+        <DEF>58</DEF>
+      </Stats>
+      <Evolutions>
+        <Pokemon>
+          <Name>Charizard</Name>
+          <Type>Fire, Flying</Type>
+          <Stats>
+            <HP>78</HP>
+            <ATK>84</ATK>
+            <DEF>78</DEF>
+          </Stats>
+          <Evolutions />
+        </Pokemon>
+      </Evolutions>
+    </Pokemon>
+    <Pokemon>
+      <Name>Charmander</Name>
+      <Type>Fire</Type>
+      <Stats>
+        <HP>39</HP>
+        <ATK>52</ATK>
+        <DEF>43</DEF>
+      </Stats>
+      <Evolutions>
+        <Pokemon>
+          <Name>Charmeleon</Name>
+          <Type>Fire</Type>
+          <Stats>
+            <HP>58</HP>
+            <ATK>64</ATK>
+            <DEF>58</DEF>
+          </Stats>
+          <Evolutions>
+            <Pokemon>
+              <Name>Charizard</Name>
+              <Type>Fire, Flying</Type>
+              <Stats>
+                <HP>78</HP>
+                <ATK>84</ATK>
+                <DEF>78</DEF>
+              </Stats>
+              <Evolutions />
+            </Pokemon>
+          </Evolutions>
+        </Pokemon>
+      </Evolutions>
+    </Pokemon>
+  </Pokemons>
+</Pokedex>

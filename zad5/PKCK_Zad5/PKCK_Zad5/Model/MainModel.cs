@@ -9,6 +9,9 @@ using System.Threading.Tasks;
 using System.Xml.Serialization;
 using System.Runtime.Serialization;
 using System.Xml;
+using System.Xml.Xsl;
+using System.Diagnostics;
+using System.Xml.Schema;
 
 namespace PKCK_Zad5.Model
 {
@@ -34,9 +37,15 @@ namespace PKCK_Zad5.Model
 
             if (saveFileDialog.FileName != null && saveFileDialog.FileName != "")
             {
-                using(XmlWriter writer = XmlWriter.Create(saveFileDialog.FileName, new XmlWriterSettings { Indent = true}))
+                //using(XmlWriter writer = XmlWriter.Create(saveFileDialog.FileName, new XmlWriterSettings { Indent = true}))
+                //{
+                //    dataContractSerializer.WriteObject(writer, Data);
+                //}
+
+                using(TextWriter writer = new StreamWriter(saveFileDialog.FileName))
                 {
-                    dataContractSerializer.WriteObject(writer, Data);
+                    XmlSerializer serializer = new XmlSerializer(typeof(Pokedex));
+                    serializer.Serialize(writer, Data);
                 }
             }
         }
@@ -52,10 +61,68 @@ namespace PKCK_Zad5.Model
 
             if (openFileDialog.FileName != null && openFileDialog.FileName != "")
             {
-                using(XmlDictionaryReader reader = XmlDictionaryReader.CreateTextReader(new FileStream(openFileDialog.FileName, FileMode.Open), new XmlDictionaryReaderQuotas()))
+                using(TextReader reader = new StreamReader(openFileDialog.FileName))
                 {
-                    Data = (Pokedex)dataContractSerializer.ReadObject(reader);
+                    XmlSerializer deserializer = new XmlSerializer(typeof(Pokedex));
+
+                    Pokedex obj = (Pokedex)deserializer.Deserialize(reader);
+                    Data = obj;
                 }
+            }
+        }
+
+        public void TransformToXHTML()
+        {
+            XslCompiledTransform transform = new XslCompiledTransform();
+
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.ShowDialog();
+
+            var xsltString = File.ReadAllText(openFileDialog.FileName);
+
+            OpenFileDialog openFileDialog2 = new OpenFileDialog();
+            openFileDialog2.ShowDialog();
+
+            var inputXml = File.ReadAllText(openFileDialog2.FileName);
+
+            using (XmlReader reader = XmlReader.Create(new StringReader(xsltString)))
+            {
+                transform.Load(reader);
+            }
+
+            StringWriter results = new StringWriter();
+            using(XmlReader reader = XmlReader.Create(new StringReader(inputXml)))
+            {
+                transform.Transform(reader, null, results);
+            }
+
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            saveFileDialog.ShowDialog();
+
+            using (StreamWriter file = new StreamWriter(saveFileDialog.FileName))
+            {
+                file.Write(results.ToString());
+            }
+        }
+
+        static void CheckValidity(string fileName)
+        {
+            try
+            {
+                XmlReaderSettings settings = new XmlReaderSettings();
+                settings.Schemas.Add("zam", "../../../Data/schema.xsd");
+                settings.ValidationType = ValidationType.Schema;
+
+                using (XmlReader reader = XmlReader.Create(fileName, settings))
+                {
+                    XmlDocument document = new XmlDocument();
+                    document.Load(reader);
+                }
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex.Message);
+                throw new Exception(ex.Message);
             }
         }
     }
